@@ -1,0 +1,17 @@
+{
+  "product" : [
+    {
+      "id" : "multipar",
+      "img": "img/prods/multipar.png",
+      "title" : "Monitor Multiparamétrico",
+      "desc" : "con los monitores multiparamétricos Feas puede monitorizar los signos vitales de pacientes adultos, pediátricos y neonatales. Su gran pantalla (15”) de alta resolución ofrece una visualización clara de los datos vitales del paciente. El monitor inteligente, junto con su posibilidad de conexión en red, y muchas otras características proporciona un monitoreo eficiente e integrado. "
+    },
+
+    {
+      "id" : "defi",
+      "img": "img/prods/defi.png",
+      "title" : "Desfibrilador",
+      "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed pulvinar velit. In ultricies vel neque sed tincidunt. Praesent dui turpis, convallis a viverra a, eleifend ac neque. Nullam at pulvinar nunc. Aenean ipsum risus, eleifend ac hendrerit placerat, mollis vel nunc. Suspendisse quis ultricies ligula. Ut ex lectus, porta sed ex quis, scelerisque dictum mi."
+    }
+  ]
+}

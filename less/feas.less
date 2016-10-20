@@ -1,0 +1,217 @@
+// Gray and Brand Colors for use across theme
+
+@theme-primary:    #333333;
+@plain-white:      #FFFFFF;
+@gray-base:        #333333;
+@sky-light:        lighten(#3C65A1, 20%);
+@gray-light:       lighten(@gray-base, 15%);
+@gray-lighty:      lighten(@gray-base, 40%);
+@gray-lighter:     lighten(@gray-base, 60%);
+
+@breakpoint: 640px;
+
+@font-face{
+    font-family: 'Cupertino';
+    src: url('../vendor/cupertino.ttf');
+}
+
+.brand-font {
+  font-family: 'Cupertino', sans-serif;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top:0px;
+  left:0px;
+  width:100%;
+  background-color: white;
+}
+
+.content{
+  padding-top: 10vh;
+  display:flex;
+  flex-flow: column;
+}
+
+.body-font{
+  font-family: 'Open Sans', sans-serif;
+  color:@gray-light;
+  font-size: 13px;
+}
+
+body {
+  margin: 0px;
+}
+
+p{
+  margin: 0px;
+  .body-font;
+}
+
+.title {
+  height: 80vh;
+   display: flex;
+   > p {
+     .brand-font;
+     font-size: 25px;
+     @media(min-width: @breakpoint){
+       font-size: 40px;
+     }
+     margin:auto;
+     color: lighten(#C1272D, 20%);
+     > span {
+       font-size:.7em;
+       color:lighten(#3C65A1, 20%);
+     }
+   }
+}
+
+.caret{
+  display:flex;
+  height:10vh;
+  a {
+    margin:auto;
+    color: @gray-lighty;
+  }
+}
+
+.navbar{
+  display: flex;
+  -webkit-flex-flow: row;
+  justify-content: center;
+
+  min-width: 300px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding:0px;
+}
+
+.navbar > li + li:before{
+  flex-basis: auto;
+  flex-grow: 1;
+  color:@gray-lighter;
+  content: '|';
+  width:50px;
+  margin: 5px;
+}
+
+.navbar > li > a {
+  .body-font;
+  text-decoration:none;
+  color: @gray-light;
+  text-align: center;
+}
+
+.navbar > li.active > a,
+.navbar > li.active > a:hover,
+.navbar > li.active > a:focus,
+.navbar > li > a:hover,
+.navbar > li > a:focus {
+  color: @gray-base;
+  background-color: transparent;
+}
+
+.heading-font {
+  font-family: 'Montserrat', sans-serif;
+  color:@gray-light;
+}
+
+.section-heading {
+  margin: 25px auto 25px auto;
+  text-align: center;
+  p {
+
+    .heading-font;
+    font-size: 30px;
+    margin: 0px;
+
+  }
+}
+
+.product-body {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.product-card {
+
+  display: flex;
+  flex-flow: column;
+  margin: 20px;
+
+  .card-inner {
+
+    width: 280px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @breakpoint) {
+      width: 500px;
+      height: 300px;
+      flex-direction: row;
+    }
+
+    .card-image {
+
+      width: 200px;
+      margin: auto;
+      @media (min-width: @breakpoint) {
+        padding-right: 10px;
+      }
+    }
+
+    .card-content {
+
+      border-top: 3px solid @gray-lighter;
+      padding: 20px 10px 0px 10px;
+
+      @media (min-width: @breakpoint) {
+        margin:auto;
+        border-top-style: none;
+        border-left: 3px solid @gray-lighter;
+        padding: 10px 10px 0px 20px;
+      }
+
+      .card-title {
+        .heading-font;
+        font-size: 17px;
+        padding-bottom:10px;
+      }
+
+      .card-description {
+        font-size: 13px;
+      }
+
+      .card-button {
+        transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        border-radius: 4px;
+        background-color: white;
+        border: 1px solid @sky-light;
+        .body-font;
+        color: @sky-light;
+        margin: 20px auto 0px auto;
+        display: block;
+
+        @media (min-width: @breakpoint) {
+          margin: 20px 0px 0px auto;
+        }
+      }
+
+      .card-button:hover
+      {
+        background-color: @sky-light;
+        color: white;
+      }
+
+    }
+
+  }
+
+}
