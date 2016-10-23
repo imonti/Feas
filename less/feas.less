@@ -141,7 +141,29 @@ p{
 
   display: flex;
   flex-flow: column;
-  margin: 20px;
+  margin: 0px;
+
+  .card-button {
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid @sky-light;
+    .body-font;
+    color: @sky-light;
+    margin: 20px auto 20px auto;
+    display: block;
+
+    @media (min-width: @breakpoint) {
+      //margin: 20px 0px 20px auto;
+      margin-right:0px;
+    }
+  }
+
+  .card-button:hover {
+    background-color: @sky-light;
+    color: white;
+  }
 
   .card-inner {
 
@@ -153,7 +175,6 @@ p{
 
     @media (min-width: @breakpoint) {
       width: 500px;
-      height: 300px;
       flex-direction: row;
     }
 
@@ -169,13 +190,13 @@ p{
     .card-content {
 
       border-top: 3px solid @gray-lighter;
-      padding: 20px 10px 0px 10px;
+      padding-top: 15px;
 
       @media (min-width: @breakpoint) {
-        margin:auto;
         border-top-style: none;
         border-left: 3px solid @gray-lighter;
-        padding: 10px 10px 0px 20px;
+        margin:auto;
+        padding: 0px 10px 0px 20px;
       }
 
       .card-title {
@@ -186,28 +207,6 @@ p{
 
       .card-description {
         font-size: 13px;
-      }
-
-      .card-button {
-        transition-duration: 0.4s;
-        -webkit-transition-duration: 0.4s;
-        border-radius: 4px;
-        background-color: white;
-        border: 1px solid @sky-light;
-        .body-font;
-        color: @sky-light;
-        margin: 20px auto 0px auto;
-        display: block;
-
-        @media (min-width: @breakpoint) {
-          margin: 20px 0px 0px auto;
-        }
-      }
-
-      .card-button:hover
-      {
-        background-color: @sky-light;
-        color: white;
       }
 
     }
