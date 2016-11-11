@@ -1,7 +1,7 @@
 // Agency Theme JavaScript
 
-(function($) {
-    "use strict"; // Start of use strict
+$(document).ready(function () {
+  "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
@@ -13,8 +13,25 @@
     });
 
     $.getJSON('content/sp.json', function(data) {
+
+      $('#results');
+
+      var pbody = $(".product-body");
+
       //Fill products title and descriptions
        $.each(data.product, function(i, product) {
+
+         pbody.append(
+           '<div class="product-card" id='+ product.id +'>' +
+            '<div class="card-inner">' +
+              '<img class="card-image" alt="">' +
+              '<div class="card-content">' +
+                '<p class="card-title"></p>' +
+                '<p class="card-description"></p>' +
+              '</div>' +
+            '</div>' +
+            '<button onclick="location.href=' + "'./html/techspecs.html'" + ';"' + ' class="card-button">ficha técnica</button>' +
+          '</div>');
 
          var card = $('#'+product.id);
 
@@ -50,5 +67,4 @@
 
      });
    });
-
-})(jQuery); // End of use strict
+});

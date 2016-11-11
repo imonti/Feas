@@ -28,6 +28,10 @@
   background-color: white;
 }
 
+.techspecs-nav {
+  display: flex;
+}
+
 .content{
   padding-top: 10vh;
   display:flex;
@@ -59,10 +63,10 @@ p{
        font-size: 40px;
      }
      margin:auto;
-     color: lighten(#C1272D, 20%);
+     color: #FF0000;
      > span {
        font-size:.7em;
-       color:lighten(#3C65A1, 20%);
+       color:#0000FF;
      }
    }
 }
@@ -72,7 +76,11 @@ p{
   height:10vh;
   a {
     margin:auto;
-    color: @gray-lighty;
+    .caret-svg {
+      width: 30px;
+      height : 30px;
+      fill: @gray-light;
+    }
   }
 }
 
@@ -141,7 +149,7 @@ p{
 
   display: flex;
   flex-flow: column;
-  margin: 0px;
+  margin: 20px;
 
   .card-button {
     transition-duration: 0.4s;
@@ -153,6 +161,7 @@ p{
     color: @sky-light;
     margin: 20px auto 20px auto;
     display: block;
+    cursor: pointer;
 
     @media (min-width: @breakpoint) {
       //margin: 20px 0px 20px auto;
@@ -212,5 +221,52 @@ p{
     }
 
   }
+
+}
+
+.tech-specs-nav {
+
+  display: flex;
+
+  margin: auto 100px;
+
+  .heading-font;
+
+  border-bottom: 2px solid @gray-lighter;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  span {
+
+    color : @gray-light;
+
+  }
+
+  .go-back-button{
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    .go-back-caret{
+
+      width: 40px;
+      height: 40px;
+
+      margin: 10px;
+
+      transform: rotate(90deg);
+
+      fill: @gray-lighty;
+
+    }
+
+  }
+
+
 
 }

@@ -12,6 +12,34 @@
       "img": "img/prods/defi.png",
       "title" : "Desfibrilador",
       "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed pulvinar velit. In ultricies vel neque sed tincidunt. Praesent dui turpis, convallis a viverra a, eleifend ac neque. Nullam at pulvinar nunc. Aenean ipsum risus, eleifend ac hendrerit placerat, mollis vel nunc. Suspendisse quis ultricies ligula. Ut ex lectus, porta sed ex quis, scelerisque dictum mi."
+    },
+
+    {
+      "id" : "cardiograph",
+      "img": "img/prods/cardiograph.png",
+      "title" : "Electrocardiógrafo",
+      "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed pulvinar velit. In ultricies vel neque sed tincidunt. Praesent dui turpis, convallis a viverra a, eleifend ac neque. Nullam at pulvinar nunc. Aenean ipsum risus, eleifend ac hendrerit placerat, mollis vel nunc. Suspendisse quis ultricies ligula. Ut ex lectus, porta sed ex quis, scelerisque dictum mi."
+    },
+
+    {
+      "id" : "heart-attack-cart",
+      "img": "img/prods/heart-attack-cart.png",
+      "title" : "Carro de Paro",
+      "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed pulvinar velit. In ultricies vel neque sed tincidunt. Praesent dui turpis, convallis a viverra a, eleifend ac neque. Nullam at pulvinar nunc. Aenean ipsum risus, eleifend ac hendrerit placerat, mollis vel nunc. Suspendisse quis ultricies ligula. Ut ex lectus, porta sed ex quis, scelerisque dictum mi."
+    },
+
+    {
+      "id" : "infusion-bomb",
+      "img": "img/prods/infusion-bomb.png",
+      "title" : "Bomba de Infusión",
+      "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed pulvinar velit. In ultricies vel neque sed tincidunt. Praesent dui turpis, convallis a viverra a, eleifend ac neque. Nullam at pulvinar nunc. Aenean ipsum risus, eleifend ac hendrerit placerat, mollis vel nunc. Suspendisse quis ultricies ligula. Ut ex lectus, porta sed ex quis, scelerisque dictum mi."
+    },
+
+    {
+      "id" : "monitoring-central",
+      "img": "img/prods/monitoring-central.png",
+      "title" : "Central de monitoreo",
+      "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed pulvinar velit. In ultricies vel neque sed tincidunt. Praesent dui turpis, convallis a viverra a, eleifend ac neque. Nullam at pulvinar nunc. Aenean ipsum risus, eleifend ac hendrerit placerat, mollis vel nunc. Suspendisse quis ultricies ligula. Ut ex lectus, porta sed ex quis, scelerisque dictum mi."
     }
   ]
 }
