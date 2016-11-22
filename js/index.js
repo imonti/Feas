@@ -30,7 +30,7 @@ $(document).ready(function () {
                 '<p class="card-description"></p>' +
               '</div>' +
             '</div>' +
-            '<button onclick="location.href=' + "'./html/techspecs.html'" + ';"' + ' class="card-button">ficha técnica</button>' +
+            `<button onclick="location.href='./html/techspecs.html?product=${product.id}'" class="card-button">ficha técnica</button>` +
           '</div>');
 
          var card = $('#'+product.id);

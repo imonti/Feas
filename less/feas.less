@@ -12,7 +12,7 @@
 
 @font-face{
     font-family: 'Cupertino';
-    src: url('../vendor/cupertino.ttf');
+    src: url('./cupertino.ttf');
 }
 
 .brand-font {
@@ -228,11 +228,17 @@ p{
 
   display: flex;
 
-  margin: auto 100px;
+  @media (min-width: @breakpoint) {
+
+    margin: auto 100px;
+
+  }
+
+  margin : auto 25px;
 
   .heading-font;
 
-  border-bottom: 2px solid @gray-lighter;
+  border-bottom: 2px solid @gray-lighty;
 
   align-items: center;
 
@@ -240,7 +246,17 @@ p{
 
   span {
 
+    @media (min-width: @breakpoint) {
+
+      max-width:none;
+
+    }
+
+    max-width:200px;
+
     color : @gray-light;
+
+    text-align: right;
 
   }
 
@@ -261,11 +277,53 @@ p{
       width: 40px;
       height: 40px;
 
-      margin: 10px;
+      margin: 10px 10px 10px 0px;
 
       transform: rotate(90deg);
 
       fill: @gray-lighty;
+
+    }
+
+  }
+
+}
+
+@media (min-width: @breakpoint) {
+
+  .techspecs-body {
+
+    display: flex;
+
+    flex-flow: column;
+
+    margin: 80px 100px;
+
+    .techspecs-section{
+
+      display:flex;
+
+      flex-flow: row;
+
+      margin-bottom: 30px;
+
+      .section-title {
+
+        .heading-font;
+
+        min-width: 100px;
+        max-width: 100px;
+
+        margin-right: 10px;
+        border-right: solid @gray-lighty;
+
+      }
+
+      .section-body {
+
+        .body-font;
+
+      }
 
     }
 
@@ -279,11 +337,60 @@ p{
 
   flex-flow: column;
 
+  margin: 80px 25px;
+
+  @media (min-width: @breakpoint) {
+
+    margin: 80px 100px;
+
+  }
+
   .techspecs-section{
 
     display:flex;
 
-    flex-flow: row;
+    flex-flow: column;
+
+    margin-bottom: 30px;
+
+    @media (min-width: @breakpoint) {
+
+      flex-flow: row;
+
+    }
+
+    .section-title {
+
+      .heading-font;
+
+      margin: 0px 0px 10px 0px;
+
+      padding: 0px 0px 10px 0px;
+
+      border-bottom: 2px solid @gray-lighter;
+
+      @media (min-width: @breakpoint) {
+
+        border-bottom: none;
+
+        min-width: 100px;
+        max-width: 100px;
+
+        margin: 0px 10px 0px 0px;
+
+        padding: 0px;
+
+        border-right: 2px solid @gray-lighter;
+
+      }
+
+    }
+
+    .section-body {
+
+      .body-font;
+
+    }
 
   }
 

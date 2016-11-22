@@ -22,7 +22,7 @@ gulp.task('browserSync', function() {
 })
 
 // Run everything
-gulp.task('default', ['less', 'copy']);
+gulp.task('default', ['less']);
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less'], function() {
