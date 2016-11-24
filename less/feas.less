@@ -9,10 +9,11 @@
 @gray-lighter:     lighten(@gray-base, 60%);
 
 @breakpoint: 640px;
+@paragraph-size: 13px;
 
 @font-face{
     font-family: 'Cupertino';
-    src: url('./cupertino.ttf');
+    src: url('../content/cupertino.ttf');
 }
 
 .brand-font {
@@ -40,8 +41,14 @@
 
 .body-font{
   font-family: 'Open Sans', sans-serif;
-  color:@gray-light;
-  font-size: 13px;
+  color: @theme-primary;
+
+  font-size: @paragraph-size;
+
+  @media(min-width: @breakpoint){
+    font-size: @paragraph-size + 2;
+  }
+
 }
 
 body {
@@ -59,9 +66,13 @@ p{
    > p {
      .brand-font;
      font-size: 25px;
+
      @media(min-width: @breakpoint){
+
        font-size: 40px;
+
      }
+
      margin:auto;
      color: #FF0000;
      > span {
@@ -123,8 +134,20 @@ p{
 }
 
 .heading-font {
+
   font-family: 'Montserrat', sans-serif;
+
   color:@gray-light;
+
+  font-size: @paragraph-size + 2;
+
+
+  @media(min-width: @breakpoint){
+
+    font-size: @paragraph-size + 4;
+
+  }
+
 }
 
 .section-heading {
@@ -164,7 +187,7 @@ p{
     cursor: pointer;
 
     @media (min-width: @breakpoint) {
-      //margin: 20px 0px 20px auto;
+
       margin-right:0px;
     }
   }
@@ -289,48 +312,6 @@ p{
 
 }
 
-@media (min-width: @breakpoint) {
-
-  .techspecs-body {
-
-    display: flex;
-
-    flex-flow: column;
-
-    margin: 80px 100px;
-
-    .techspecs-section{
-
-      display:flex;
-
-      flex-flow: row;
-
-      margin-bottom: 30px;
-
-      .section-title {
-
-        .heading-font;
-
-        min-width: 100px;
-        max-width: 100px;
-
-        margin-right: 10px;
-        border-right: solid @gray-lighty;
-
-      }
-
-      .section-body {
-
-        .body-font;
-
-      }
-
-    }
-
-  }
-
-}
-
 .techspecs-body {
 
   display: flex;
@@ -373,12 +354,12 @@ p{
 
         border-bottom: none;
 
-        min-width: 100px;
-        max-width: 100px;
+        min-width: 200px;
+        max-width: 200px;
 
         margin: 0px 10px 0px 0px;
 
-        padding: 0px;
+        padding: 0px 10px 0px 0px;
 
         border-right: 2px solid @gray-lighter;
 
@@ -389,6 +370,26 @@ p{
     .section-body {
 
       .body-font;
+
+      ul ul {
+
+        list-style-type: disc;
+
+      }
+
+      ul:first-child {
+
+        @media (min-width: @breakpoint) {
+
+          padding-left: 40px
+
+        }
+
+        padding-left: 25px;
+
+        margin-top: 0px;
+
+      }
 
     }
 
