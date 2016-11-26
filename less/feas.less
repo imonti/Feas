@@ -27,6 +27,7 @@
   left:0px;
   width:100%;
   background-color: white;
+  .bottom-shadow;
 }
 
 .techspecs-nav {
@@ -151,15 +152,15 @@ p{
 }
 
 .section-heading {
+
   margin: 25px auto 25px auto;
+
   text-align: center;
-  p {
 
-    .heading-font;
-    font-size: 30px;
-    margin: 0px;
+  .heading-font;
 
-  }
+  margin: 20px 0px 20px 0px;
+
 }
 
 .product-body {
@@ -200,7 +201,6 @@ p{
   .card-inner {
 
     width: 280px;
-    margin: auto;
 
     display: flex;
     flex-direction: column;
@@ -238,7 +238,7 @@ p{
       }
 
       .card-description {
-        font-size: 13px;
+
       }
 
     }
@@ -388,6 +388,56 @@ p{
         padding-left: 25px;
 
         margin-top: 0px;
+
+      }
+
+    }
+
+  }
+
+}
+
+.bottom-shadow {
+
+  box-shadow: 0 4px 10px -2px rgba(0,0,0, .05);
+
+}
+
+.services-body {
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 700px;
+
+  .service-card{
+
+    display: flex;
+    flex-flow: column;
+    margin: 20px;
+    justify-content: flex-start;
+
+    min-width: 300px;
+    max-width: 300px;
+
+    .service-header{
+
+      .heading-font;
+      font-size: 17px;
+      padding-bottom:10px;
+      margin:0px auto;
+
+    }
+
+    .service-icon{
+
+      margin:0px auto;
+
+      svg{
+
+        fill: @gray-light;
+
+        width: 50px
 
       }
 
