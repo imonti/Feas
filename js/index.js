@@ -18,19 +18,21 @@ $(document).ready(function () {
 
       var pbody = $(".product-body");
 
+      var defaultImgURL = '../content/img/sample.png';
+
       //Fill products title and descriptions
        $.each(data.product, function(i, product) {
 
          pbody.append(
            '<div class="product-card" id='+ product.id +'>' +
             '<div class="card-inner">' +
-              '<img class="card-image" alt="">' +
+              `<img class="card-image" onerror="this.src='${defaultImgURL}'" alt="">` +
               '<div class="card-content">' +
                 '<p class="card-title"></p>' +
                 '<p class="card-description"></p>' +
               '</div>' +
             '</div>' +
-            `<button onclick="location.href='./html/techspecs.html?product=${product.id}'" class="card-button">ficha técnica</button>` +
+            `<button  onclick="location.href='./html/techspecs.html?product=${product.id}'" class="card-button">ficha técnica</button>` +
           '</div>');
 
          var card = $('#'+product.id);
