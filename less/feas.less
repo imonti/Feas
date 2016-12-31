@@ -1,13 +1,14 @@
 // Gray and Brand Colors for use across theme
 
-@theme-primary:    #333333;
+@theme-primary:    #222222;
 @plain-white:      #FFFFFF;
-@gray-base:        #333333;
+@gray-base:        #222222;
 @sky-light:        lighten(#3C65A1, 20%);
 @gray-light:       lighten(@gray-base, 15%);
 @gray-lighty:      lighten(@gray-base, 40%);
 @gray-lighter:     lighten(@gray-base, 60%);
 
+@mid-size: 910px;
 @breakpoint: 640px;
 @paragraph-size: 13px;
 
@@ -27,7 +28,6 @@
   left:0px;
   width:100%;
   background-color: white;
-  .bottom-shadow;
 }
 
 .techspecs-nav {
@@ -35,7 +35,7 @@
 }
 
 .content{
-  padding-top: 10vh;
+  //padding-top: 10vh; setted via javascript
   display:flex;
   flex-flow: column;
 }
@@ -62,30 +62,34 @@ p{
 }
 
 .title {
-  height: 80vh;
-   display: flex;
-   > p {
-     .brand-font;
-     font-size: 25px;
 
-     @media(min-width: @breakpoint){
+  //height: 80vh; setted via javascript
+  display: flex;
 
-       font-size: 40px;
+  > p {
 
-     }
+    .brand-font;
+    font-size: 25px;
 
-     margin:auto;
-     color: #FF0000;
-     > span {
-       font-size:.7em;
-       color:#0000FF;
-     }
-   }
+    @media(min-width: @breakpoint){
+
+      font-size: 40px;
+
+    }
+
+    margin:auto;
+    color: #FF0000;
+    > span {
+      font-size:.7em;
+      color:#0000FF;
+    }
+  }
+
 }
 
 .caret{
   display:flex;
-  height:10vh;
+  //height:10vh; setted via javascript
   a {
     margin:auto;
     .caret-svg {
@@ -152,15 +156,16 @@ p{
 }
 
 .section-heading {
-
-  margin: 25px auto 25px auto;
-
+  margin: 25px auto 50px auto;
   text-align: center;
 
-  .heading-font;
+  p {
 
-  margin: 20px 0px 20px 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+    font-size: 30px;
 
+  }
 }
 
 .product-body {
@@ -171,82 +176,90 @@ p{
 
 .product-card {
 
+
   display: flex;
   flex-flow: column;
-  margin: 20px;
+  height : 300px;
+  width: 100%;
 
-  .card-button {
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    border-radius: 4px;
-    background-color: white;
-    border: 1px solid @sky-light;
-    .body-font;
-    color: @sky-light;
-    margin: 20px auto 20px auto;
-    display: block;
-    cursor: pointer;
+  .product-card-inner {
 
-    @media (min-width: @breakpoint) {
-
-      margin-right:0px;
-    }
-  }
-
-  .card-button:hover {
-    background-color: @sky-light;
-    color: white;
-  }
-
-  .card-inner {
-
-    width: 280px;
-
+    margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-flow: row;
+    width: 50%;
 
-    @media (min-width: @breakpoint) {
-      width: 500px;
-      flex-direction: row;
-    }
+    .card-image-container{
 
-    .card-image {
+      width: 50%;
+      overflow: hidden;
+      display:flex;
 
-      width: 200px;
-      height: 200px;
-      margin: auto;
-      @media (min-width: @breakpoint) {
-        padding-right: 10px;
+      .card-image {
+
+        width: 250px;
+        margin: auto 0px auto auto;
+
       }
 
     }
 
-    .card-content {
+    .card-description {
 
-      border-top: 3px solid @gray-lighter;
-      padding-top: 15px;
+      width: 50%;
+      display: flex;
+      flex-flow: column;
 
-      height:200px;
+      .card-description-inner{
 
-      @media (min-width: @breakpoint) {
-        border-top-style: none;
-        border-left: 3px solid @gray-lighter;
-        margin:auto;
-        padding: 0px 10px 0px 20px;
+        margin: auto auto auto 0px;
+        padding-left: 10px;
+        display:flex;
+        flex-flow: column;
+        border-left: 2px solid #AAAAAA;
+
+        .card-title {
+
+          margin: auto auto 10px 0px;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 20px;
+
+        }
+
+        .card-buttons {
+
+          font-family: 'Open Sans', sans-serif;
+
+          a {
+
+            text-decoration: none;
+            color: #31597D;
+
+          }
+
+        }
+
       }
 
-      .card-title {
-        .heading-font;
-        font-size: 17px;
-        padding-bottom:10px;
+    }
+
+  }
+
+  @media(max-width: @mid-size){
+
+    .product-card-inner {
+
+      width: 80vw;
+
+      .card-image-container{
+        width: 40vw;
       }
 
       .card-description {
-
+        width: 40vw;
       }
-
     }
-
+    
   }
 
 }
@@ -401,48 +414,28 @@ p{
 
 }
 
-.bottom-shadow {
+.services-container {
 
-  box-shadow: 0 4px 10px -2px rgba(0,0,0, .05);
+  width: 80%;
+  height: 100px;
+  margin:auto;
+  display:flex;
 
-}
+  .services-pair {
 
-.services-body {
+    margin:auto;
+    display:flex;
+    flex-flow: row;
 
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  max-width: 700px;
-  margin: auto;
+    .service {
 
-  .service-card{
+      margin:auto;
+      display: flex;
+      flex-flow: column;
 
-    display: flex;
-    flex-flow: column;
-    margin: 20px;
-    justify-content: flex-start;
+      .serivce-title {
 
-    min-width: 300px;
-    max-width: 300px;
-
-    .service-header{
-
-      .heading-font;
-      font-size: 17px;
-      padding-bottom:10px;
-      margin:0px auto;
-
-    }
-
-    .service-icon{
-
-      margin:0px auto;
-
-      svg{
-
-        fill: @gray-light;
-
-        width: 50px
+        margin:auto;
 
       }
 
@@ -450,4 +443,12 @@ p{
 
   }
 
+}
+
+.icon {
+  display: inline-block;
+  height: 6em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
