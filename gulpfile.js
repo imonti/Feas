@@ -1,6 +1,7 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const less = require('gulp-less');
+const browserSync = require('browser-sync').create();
+const svgSymbols = require('gulp-svg-symbols');
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
@@ -22,14 +23,23 @@ gulp.task('browserSync', function() {
 })
 
 // Run everything
-gulp.task('default', ['less']);
+gulp.task('default', ['less', 'dev']);
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less'], function() {
+
     gulp.watch('less/*.less', ['less']);
 
-    // Reloads the browser whenever HTML or JS files change
     gulp.watch('js/*.js', browserSync.reload);
     gulp.watch('css/*.css', browserSync.reload);
-    gulp.watch('html/*.html', browserSync.reload);
+    gulp.watch('./*.html', browserSync.reload);
+
+});
+
+gulp.task('build-svg-defs', function () {
+
+  return gulp.src('img/icons/*.svg')
+    .pipe(svgSymbols())
+    .pipe(gulp.dest('img/icons/svg-defs'));
+
 });
