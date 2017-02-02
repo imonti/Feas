@@ -1,0 +1,94 @@
+Desfibrilador defi
+  Carecterísticas generales
+    Monitor
+      Monitor de electrocardiograma con pantalla LCD.
+      Señal de electrocardiograma adquirida por cable a paciente o por paletas.
+    Derivaciones:
+      Con cable de 3 broches: DI, DII, DIII
+      Con cable de 5 broches: DI, DII, DIII, aVR, aVF, aVL y precordial.
+      Electrocardiograma en cascada.
+      Indicación digital de frecuencia cardíaca.
+      Indicador de batería baja.
+      Indicador luminoso de batería en carga.
+      Tecla de silencio de alarmas.
+      Alarmas de frecuencia cardíaca de 20 a 250 [1/min].
+      Ganancia de ECG: 1/6, 1/4,1/2,1y2 [cm/mV].
+    Desfibrilador
+      Onda Bifásica.
+      Uso de desfibrilador en tres pasos:
+      Encendido y selección de energía.
+      Carga.
+      Disparo de energía por medio de pulsadores en paletas o desde teclado.
+      Llave de selección de carga por pasos: 2, 3, 5, 7, 10, 20, 30, 50, 70,100, 150 y 200 [Joules].
+      Indicación auditiva y visual de final de carga.
+      Indicación de energía almacenada en display.
+      Disparo de Energía presionando simultáneamente ambos pulsadores de paletas o la tecla “DISPARO”.
+      Anulación interna de carga ocurre: al apretar tecla “ANULAR CARGA” o al transcurrir 60 s desde fin de carga o al pasar la llave selectora de energía a la posición de “MONITOR” o “APAGADO”.
+      Descarga libre o sincronizada.
+      Indicación auditiva y visual del modo sincrónico.
+      Capacidad de Descarga: 150 descargas a energía máxima, con la batería interna a plena carga.
+      Tiempo de carga a 200 J: Menor a 6 s.
+      Incluye test de energía entregada
+  Canales Opcionales
+    Registrador
+      Tecla directa de registro.
+      Registro automático ante un evento.
+      Registrador térmico de alta resolución.
+      Velocidad de Registro: 25 mm/s.
+      Imprime: fecha y hora, energía en Joules, curva de electrocardiograma, ganancia, frecuencia cardíaca, derivación, velocidad de barrido, curva pletismográfica, SpO F.P., modo, frecuencia de marcapasos, corriente de marcapasos.
+      Papel: ancho: 50 mm, diámetro máximo: 45 mm.
+    Marcapasos transcutáneo
+      Estimulación externa a través de electrodos.
+      Frecuencia: 40 ppm a 180 ppm (seleccionable en pasos de 5 ppm).
+      Corriente: 10 mA a 200 mA (seleccionable en pasos de 5 mA).
+      Modo: seleccionable, a demanda o fijo.
+      Ancho de pulso: 20 ms ± 5%.
+      Juego de electrodos y banda elástica.
+    Saturación de oxígeno
+      Medición de SpO :
+      Rango: 0% a 100%.
+    Exactitud:
+      Adulto ±2 70 y 100%.
+      Neonatal ±3% entre el 70% y 100%.
+      En Movimiento ±3% entre el 70% y 100%.
+      Resolución: 1%.
+    Alarma de saturación porcentual de oxígeno:
+      Límite superior: 1 a 100.
+      Límite inferior: 0 a 99.
+      Medición de frecuencia de pulso y alarmas desde 30 a 250 [1/min] ±3 [1/min] y ±5 [1/min] en Movimiento.
+      Resolución: 1 [1/min].
+      Sensor pinza adulto o pediátrico.
+      Prolongador para sensor.
+  Accesorios incluidos
+      Paletas externas para adultos con cable espiralado.
+      Cable de Alimentación para entrada de +12 Vcc externos.
+      Cable de Alimentación de línea.
+      Cable a paciente de 3 broches o 5 broches para ECG.
+      Electrodos Descartables.
+      Manual de Uso.
+      Conexión a paletas internas o a parches de desfibrilación.
+  Especificaciones técnicas
+      Tensión de alimentación: 90 Vca-240 Vca - 50 Hz/60 Hz o 12 Vcc.
+      Batería interna recargable NiMh - 12V, 3500 mAh.
+      Consumo: 180 W (7 W durante la espera).
+      Tamaño: 295 mm x 200 mm x 345 mm (largo).
+      Peso: 6 Kg (Incluyendo Paletas externas, batería y registrador).
+      Fácil de transportar debido a su reducido tamaño y peso.
+    Normas de Calidad:
+      Marcado CE, Dir. 93/42/CEE (certificada).
+      ISO9001 (certificada).
+      ISO13485 (certificada).
+      Disp. A.N.M.A.T. 3266/2013: B.P.F.
+      Disp. A.N.M.A.T. 2319/02.
+    Normas de Seguridad:
+      EN 60601-1 (Eq. IRAM 4220-1 e IEC 601-1).
+      EN 60601-1-2 (Compatibilidad Electromagnética).
+      EN 60601-1-6.
+      EN 60601-1-8.
+      EN 60601-2-4.
+      EN 60601-2-27.
+      EN 60601-2-49.
+      ISO 80601-2-61.
+      Autorizado por la A.N.M.A.T. PM-1125-15.
+    Ámbito de utilización
+      Ambulancias, salas de terapia intensiva, unidades coronarias, quirófanos.

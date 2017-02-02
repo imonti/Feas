@@ -1,42 +1,45 @@
 var products = [
   {
-    "id" : "multipar",
+    "id" : "monitores",
+    "defaultProd": "multipar",
     "img": "img/prods/multipar.png",
     "title" : "Monitores Multiparamétricos"
   },
 
   {
-    "id" : "defi",
+    "id" : "defibriladores",
+    "defaultProd": "feas",
     "img": "img/prods/defi.png",
     "title" : "Desfibriladores"
   },
 
   {
-    "id" : "cardiograph",
+    "id" : "cardiografos",
+    "defaultProd": "tc",
     "img": "img/prods/cardiograph.png",
     "title" : "Electrocardiógrafos"
   },
 
   {
-    "id" : "heart-attack-cart",
+    "id" : "carromulti",
     "img": "img/prods/heart-attack-cart.png",
     "title" : "Carros"
   },
 
   {
-    "id" : "infusion-bomb",
+    "id" : "bombperist",
     "img": "img/prods/infusion-bomb.png",
     "title" : "Bombas de Infusión"
   },
 
   {
-    "id" : "monitoring-central",
+    "id" : "central",
     "img": "img/prods/monitoring-central.png",
     "title" : "Centrales de monitoreo"
   },
 
   {
-    "id" : "poligrafos",
+    "id" : "poligrafoh",
     "img": "img/prods/poligraph.png",
     "title" : "Polígrafos"
   },
@@ -68,82 +71,88 @@ var svg = {
     </svg>`
 };
 
+
+
 $(document).ready(function () {
   "use strict"; // Start of use strict
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
-        event.preventDefault();
-    });
+   // jQuery for page scrolling feature - requires jQuery Easing plugin
+   $('a.page-scroll').bind('click', function(event) {
+       var $anchor = $(this);
+       $('html, body').stop().animate({
+           scrollTop: ($($anchor.attr('href')).offset().top - 50)
+       }, 1250, 'easeInOutExpo');
+       event.preventDefault();
+   });
 
-    //$(window).resize(onResize);
+   //$(window).resize(onResize);
 
-    function onResize() {
+   function onResize() {
 
-      let _height = $(window).height()
+     let _height = $(window).height()
 
-      $(".content").css("padding-top", _height * 0.1);
-      $(".title").css("height", _height * 0.8);
-      $(".caret").css("height", _height * 0.1);
-      $(document).scrollTop(0);
+     $(".content").css("padding-top", _height * 0.1);
+     $(".title").css("height", _height * 0.8);
+     $(".caret").css("height", _height * 0.1);
+     $(document).scrollTop(0);
 
-    }
+   }
 
-    onResize();
+   onResize();
 
-    let pbody = $(".product-body");
-    //let quaternions = pbody.find('.product-quaternion');
-    let defaultImage = "img/prods/default.png"
-    //Fill products title and descriptions
-    for(var i = 0 ; i < products.length ; ++i) {
+   let pbody = $(".product-body");
+   //let quaternions = pbody.find('.product-quaternion');
+   let defaultImage = "img/prods/default.png"
+   //Fill products title and descriptions
+   for(var i = 0 ; i < products.length ; ++i) {
 
-      let product = products[i];
-      //let quat = $(quaternions[Math.floor(i/4)]);
+     let product = products[i];
+      pbody.append(
+       `<div class="product-card" id=${ product.id }>
+         <img class="card-image" onerror="if (this.src != 'img/prods/default.png')  this.src = 'img/prods/default.png';">
+         <div class="horizontal-line"></div>
+         <p class="card-title"></p>
+         <div>
+           <button class="card-button" id="${product.id}-button">
+             ${svg.document}
+             <p>Ficha Técnica</p>
+           </button><div></div>
+           <button class="card-button">
+             ${svg.phone}
+             <p>Contáctenos</p>
+           </button>
+         </div>
+       </div>`);
 
-       pbody.append(
-        `<div class="product-card" id=${ product.id }>
-          <img class="card-image" onerror="if (this.src != 'img/prods/default.png')  this.src = 'img/prods/default.png';">
-          <div class="horizontal-line"></div>
-          <p class="card-title"></p>
-          <div>
-            <button class="card-button">
-              ${svg.document}
-              <p>Ficha Técnica</p>
-            </button><div></div>
-            <button class="card-button">
-              ${svg.phone}
-              <p>Contáctenos</p>
-            </button>
-          </div>
-        </div>`);
+      $(`#${product.id}-button`).click(()=>{
 
-       var card = $('#'+product.id);
+         window.location = `html/techspecs.html?${product.id}#${product.defaultProd}`;
 
-       if (card) {
+      });
 
-         var image = card.find('.card-image');
+      var card = $('#'+product.id);
+
+      if (card) {
+
+        var image = card.find('.card-image');
 
 
-         if(image) {
+        if(image) {
 
-           image.attr('src', product.img);
+          image.attr('src', product.img);
 
-         }
+        }
 
-         var title = card.find('.card-title');
+        var title = card.find('.card-title');
 
-         if(title){
+        if(title){
 
-           title.text(product.title)
+          title.text(product.title)
 
-         }
+        }
 
-       }
+      }
 
-   };
+  };
 
 });

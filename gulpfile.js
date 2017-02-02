@@ -43,3 +43,20 @@ gulp.task('build-svg-defs', function () {
     .pipe(gulp.dest('img/icons/svg-defs'));
 
 });
+
+gulp.task('hard-deploy', ['soft-deploy'], function(){
+
+    gulp.src('./img/icons/svg-defs/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/img/icons/svg-defs'));
+    gulp.src('./img/prods/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/img/prods'));
+
+});
+
+
+gulp.task('soft-deploy', function(){
+    gulp.src('./content/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/content'));
+    gulp.src('./html/techspecs.html').pipe(gulp.dest('C:/xampp/htdocs/feas/html'));
+    gulp.src('./css/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/css'));
+    gulp.src('./js/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/js'));
+    gulp.src('./index.html').pipe(gulp.dest('C:/xampp/htdocs/feas'));
+    gulp.src('./index.php').pipe(gulp.dest('C:/xampp/htdocs/feas'));
+});
