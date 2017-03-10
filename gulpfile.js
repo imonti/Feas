@@ -54,7 +54,7 @@ gulp.task('hard-deploy', ['soft-deploy'], function(){
 
 gulp.task('soft-deploy', function(){
     gulp.src('./content/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/content'));
-    gulp.src('./html/techspecs.html').pipe(gulp.dest('C:/xampp/htdocs/feas/html'));
+    gulp.src('./products/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/products'));
     gulp.src('./css/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/css'));
     gulp.src('./js/*.*').pipe(gulp.dest('C:/xampp/htdocs/feas/js'));
     gulp.src('./index.html').pipe(gulp.dest('C:/xampp/htdocs/feas'));

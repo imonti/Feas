@@ -56,15 +56,17 @@ $(function() {
 
         noErrors = true;
 
+        $("#contact-submit").prop('disabled', true);
+        $("#contact-submit").text('Enviando');
+
         contact_form.find("input, textarea").blur();
 
         if(noErrors){
 
-
-            let name = "name";
-            let phone = "phone";
-            let email = "ivomontigatti@gmail.com";
-            let message = "message";
+            let name = $("#name").val();
+            let phone = $("#phone").val();
+            let email = $("#email").val();
+            let message = $("#message").val();
             
             $.ajax({
                 url: 'index.php',
@@ -78,7 +80,15 @@ $(function() {
 
             }).done(function( data ) {
 
-                console.log(data);
+                //$("#contact-submit").prop('disabled', false);
+                $("#contact-submit").addClass('used', false);
+                $("#contact-submit").text('Mensaje Enviado!');
+
+                /*
+                if(data == "1"){
+                    console.log("its a text");
+                }
+                */
 
             });
 
@@ -88,36 +98,4 @@ $(function() {
         return false;
 
     });
-    /*
-    $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
-        submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
-            
-        },
-        filter: function() {
-            return $(this).is(":visible");
-        },
-    });
-
-
-    $("a[data-toggle=\"tab\"]").click(function(e) {
-        e.preventDefault();
-        $(this).tab("show");
-    });
-
-    */
 });
